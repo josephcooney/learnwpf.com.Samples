@@ -1,0 +1,17 @@
+﻿<l:Slide x:Class="LapAroundWPFTechEd2007.Slides.StyleIntro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    Title="Styles">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="5" />
+		</Grid.RowDefinitions>
+		<ContentControl x:Name="container" />
+		<GridSplitter ResizeDirection="Rows"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom" Height="3" Background="#222222"/>
+		<TextBox x:Name="editor" HorizontalAlignment="Center" BorderThickness="0" Margin="5" Grid.Row="1" Foreground="White" Background="Transparent" AcceptsReturn="True" AcceptsTab="True" FontFamily="Consolas" FontSize="22" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+	</Grid>
+</l:Slide>

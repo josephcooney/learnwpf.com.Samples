@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LearnWPF.VirtualizingTreeView.NodeViewModel&lt;T&gt;">
+    <Position X="5.75" Y="3.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQQCAAAEAAAAAAAEAAGAgAAIABAAABgAAAAIAAE=</HashCode>
+      <FileName>TreeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LearnWPF.VirtualizingTreeView.TreeViewModel&lt;T&gt;">
+    <Position X="5.75" Y="1" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TreeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

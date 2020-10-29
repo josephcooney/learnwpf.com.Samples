@@ -1,0 +1,42 @@
+﻿<Window x:Class="FontIcons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="Icon">
+            <Setter Property="FontFamily" Value="/Fonts/#FontAwesomeRegular" />
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="IconEmbossed" BasedOn="{StaticResource Icon}">
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Direction="270" ShadowDepth="1" BlurRadius="0" Color="White" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="DarkGray" />
+        </Style>
+        
+        <Style TargetType="StackPanel" x:Key="container">
+            <Setter Property="Orientation" Value="Horizontal" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        
+    </Window.Resources>
+    <StackPanel>
+        <StackPanel Style="{StaticResource container}" >
+            <TextBlock Style="{StaticResource Icon}" Text="&#xF06E; &#xF08A; Font &#xF03E;" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource container}" Background="LightGray">
+            <TextBlock Style="{StaticResource IconEmbossed}" Text="&#xF06E; &#xF08A; Font &#xF03E; Embossed" />
+        </StackPanel>
+
+        <Button Margin="10" HorizontalAlignment="Center" FontSize="16">
+            <TextBlock Text="&#xF085; Settings" FontSize="20" Style="{StaticResource Icon}" />
+        </Button>
+
+    </StackPanel>
+</Window>

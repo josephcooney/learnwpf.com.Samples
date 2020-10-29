@@ -1,0 +1,15 @@
+﻿<s:Slide x:Class="LapAroundWPFTechEd2007.Slides.Layout.LayoutIntro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    Title="Layout"
+    SubTitle=" - Panels &amp; their children"
+    >
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+		<TextBlock Style="{StaticResource bulletTxt}" FontFamily="Consolas" Text="&lt;Panel/&gt;" />
+		<TextBlock Style="{StaticResource bulletTxt}" FontFamily="Consolas" xml:space="preserve" Text="    &lt;Child-1/&gt;" />
+		<TextBlock Style="{StaticResource bulletTxt}" FontFamily="Consolas" xml:space="preserve" Text="    &lt;Child-2/&gt;" />
+		<TextBlock Style="{StaticResource bulletTxt}" FontFamily="Consolas" xml:space="preserve" Text="    &lt;Child-3/&gt;" />
+		<TextBlock Style="{StaticResource bulletTxt}" FontFamily="Consolas" Text="&lt;/Panel&gt;" />		
+	</StackPanel>
+</s:Slide>

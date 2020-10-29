@@ -1,0 +1,35 @@
+﻿<Window x:Class="VisualGuideToFontWeights.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="Calibri" /> <!-- change the font here for all the text blocks-->
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="10">
+        
+        <Border Margin="10" Background="LightGray" Padding="10">
+            <TextBlock Text="This shows the different font-weights for a given font" TextWrapping="Wrap" />
+        </Border>
+        
+        <TextBlock FontWeight="Thin"  Text="Jackdaws love my big sphinx of quartz - Thin - 100" />
+        <TextBlock FontWeight="UltraLight"  Text="Jackdaws love my big sphinx of quartz - UltraLight - 200" />
+        <TextBlock FontWeight="ExtraLight"  Text="Jackdaws love my big sphinx of quartz - ExtraLight - 200" />
+        <TextBlock FontWeight="Light"  Text="Jackdaws love my big sphinx of quartz - Light - 300" />
+        <TextBlock FontWeight="Normal"  Text="Jackdaws love my big sphinx of quartz - Normal - 400" />
+        <TextBlock FontWeight="Regular"  Text="Jackdaws love my big sphinx of quartz - Regular - 400" />
+        <TextBlock FontWeight="Medium"  Text="Jackdaws love my big sphinx of quartz - Medium - 500" />
+        <TextBlock FontWeight="DemiBold"  Text="Jackdaws love my big sphinx of quartz - DemiBold - 600" />
+        <TextBlock FontWeight="SemiBold"  Text="Jackdaws love my big sphinx of quartz - SemiBold - 600" />
+        <TextBlock FontWeight="Bold"  Text="Jackdaws love my big sphinx of quartz - Bold - 700" />
+        <TextBlock FontWeight="UltraBold"  Text="Jackdaws love my big sphinx of quartz - UltraBold - 800" />
+        <TextBlock FontWeight="ExtraBold"  Text="Jackdaws love my big sphinx of quartz - ExtraBold - 800" />
+        <TextBlock FontWeight="Heavy"  Text="Jackdaws love my big sphinx of quartz - Heavy - 900" />
+        <TextBlock FontWeight="Black"  Text="Jackdaws love my big sphinx of quartz - Black - 900" />
+        <TextBlock FontWeight="ExtraBlack"  Text="Jackdaws love my big sphinx of quartz - ExtraBlack - 950" />
+        <TextBlock FontWeight="UltraBlack"  Text="Jackdaws love my big sphinx of quartz - UltraBlack - 950" />
+    </StackPanel>
+</Window>

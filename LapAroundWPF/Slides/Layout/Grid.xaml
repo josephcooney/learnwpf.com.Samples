@@ -1,0 +1,20 @@
+﻿<s:Slide x:Class="LapAroundWPFTechEd2007.Slides.Layout.Grid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    Title="Grid">
+      <Grid Grid.Row="1"  ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+        <!-- set a width on the column, absolute or * -->
+        <ColumnDefinition />
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+		<Button Grid.Row="1" Content="Grid.Column='1' &amp; Grid.Row='1'" Grid.Column="1" />
+      </Grid>  
+
+</s:Slide>

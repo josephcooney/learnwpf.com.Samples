@@ -1,0 +1,52 @@
+﻿<l:Slide x:Class="LapAroundWPFTechEd2007.Slides.DataBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    xmlns:c="clr-namespace:LapAroundWPFTechEd2007.Controls"
+    Title="Data {Binding}">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="150" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<Border x:Name="wpfBlock" Grid.Row="1" Margin="10" CornerRadius="5" BorderThickness="2" BorderBrush="Blue">
+			<Border.Background>
+				<LinearGradientBrush EndPoint="0,0" StartPoint="0,1">
+					<GradientStop Color="#FF273A91" Offset="0.006"/>
+					<GradientStop Color="#FF619BFF" Offset="0.87"/>
+					<GradientStop Color="#FF446BC9" Offset="0.545"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			<StackPanel VerticalAlignment="Center">
+				<TextBlock Style="{StaticResource slideText}" Margin="10" Text="WPF Object" />
+				<TextBlock Style="{StaticResource slideText}" FontSize="18" Text="e.g. TextBox," />
+				<TextBlock Style="{StaticResource slideText}" FontSize="18" Text="RadioButton" />
+			</StackPanel>
+		</Border>
+
+		<Border Grid.Column="2" Grid.Row="1" Margin="10" CornerRadius="5" BorderThickness="2" BorderBrush="Red" x:Name="clrBlock">
+			<Border.Background>
+				<LinearGradientBrush EndPoint="0,0" StartPoint="0,1">
+					<GradientStop Color="#ff9c91" Offset="1"/>
+					<GradientStop Color="#ff1a00" Offset="0.4"/>
+					<GradientStop Color="#ff4e3a" Offset="0"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			<TextBlock Style="{StaticResource slideText}" Margin="10" Text=".NET Object" />
+		</Border>
+
+		<c:ArrowLine Grid.Column="1" Grid.Row="1" X1="3" X2="147" Y1="100" Panel.ZIndex="5" Y2="100" Stroke="White" StrokeThickness="6" Fill="White" ArrowEnds="Both" IsArrowClosed="True" VerticalAlignment="Center" >
+		</c:ArrowLine>
+
+		<TextBlock Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource slideText}" FontSize="32" Text="OneWay, TwoWay, OneWayToSource, OneTime" />
+
+	</Grid>
+</l:Slide>

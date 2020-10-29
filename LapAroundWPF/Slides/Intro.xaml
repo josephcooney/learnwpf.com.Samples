@@ -1,0 +1,31 @@
+﻿<l:Slide x:Class="LapAroundWPFTechEd2007.Slides.Intro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    Title="Intro to WPF"
+	SubTitle=" A Lap Around Windows Presentation Foundation"
+   >
+	<Grid>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition Height="3*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		
+			<TextBlock Style="{StaticResource slideText}" Text="Joseph Cooney" FontSize="55" Grid.ColumnSpan="2" />
+			<TextBlock Style="{StaticResource slideSmallText}" FontFamily="Piercing LT Std Bold" Text="Software Development Consultant" FontSize="50" Grid.Row="1" />
+
+		<TextBlock Style="{StaticResource slideSmallText}" Text="MVP, Windows Presentation Foundation" FontSize="42" Grid.Row="2" />
+		<Image Source="/Resources/Images/MVP_Horizontal_FullColor.png" Width="300" Grid.Row="2" Grid.Column="1" />
+
+<TextBlock Style="{StaticResource slideSmallText}" Text="WPF Blog: learnwpf.com" FontSize="42" Grid.Row="3" />
+		<Image Source="/Resources/Images/learnwpflogo.gif" Width="300" Grid.Row="3" Grid.Column="1" />
+	</Grid>
+</l:Slide>

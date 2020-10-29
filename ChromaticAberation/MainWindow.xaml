@@ -1,0 +1,23 @@
+﻿<Window x:Class="LearnWPF.RgbSeparation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:l="clr-namespace:LearnWPF.RgbSeparation" Title="LearnWPF - Chromatic Aberration" Height="350" Width="525" Background="White">
+    <Grid Background="White">
+        <Grid.Effect>
+            <l:RgbSeparationEffect x:Name="rgbFx" />
+        </Grid.Effect>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20">
+            <Button Content="Foo" />
+            <CheckBox>Testing</CheckBox>
+            <ComboBox />
+        </StackPanel>
+        
+        <Image Grid.Column="2" Source="lena.jpg" />
+        
+    </Grid>
+</Window>

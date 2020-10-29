@@ -1,0 +1,97 @@
+﻿<Window x:Class="GelButtons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+
+        <Style TargetType="{x:Type Button}" x:Key="roundButton">
+            <Style.Resources>
+
+                <!-- colors -->
+                <LinearGradientBrush x:Key="roundButtonBackground" StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+
+                <LinearGradientBrush x:Key="disabledRoundButtonBackground" StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#555" />
+                    <GradientStop Color="#CCC" Offset="1" />
+                </LinearGradientBrush>
+
+                <RadialGradientBrush x:Key="mouseOverRoundButtonBackground">
+                    <GradientStop Color="#FFF9F7A9" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="0.2" />
+                    <GradientStop Color="Orange" Offset="0.7" />
+
+                    <GradientStop Color="Red" Offset="1" />
+                </RadialGradientBrush>
+
+                <LinearGradientBrush x:Key="glossShineBrush" StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#DDFFFFFF" Offset="0" />
+                    <GradientStop Color="#33FFFFFF" Offset="1" />
+                </LinearGradientBrush>
+
+                <SolidColorBrush x:Key="roundButtonStroke" Color="Red" />
+
+                <SolidColorBrush x:Key="disabledRoundButtonStroke" Color="#333" />
+
+                <DropShadowEffect x:Key="focusEffect" ShadowDepth="0" Color="Orange" BlurRadius="4"  />
+                <DropShadowEffect x:Key="pressedEffect" ShadowDepth="0" Color="Red" BlurRadius="6"  />
+
+            </Style.Resources>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="7*" />
+                                <RowDefinition Height="7*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="5*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Ellipse x:Name="bgEllipse" Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="{StaticResource roundButtonBackground}" Stroke="{StaticResource roundButtonStroke}" />
+                            <ContentPresenter Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                            <Ellipse x:Name="shine" Grid.Row="1" Grid.Column="1" Fill="{StaticResource glossShineBrush}" />
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter TargetName="bgEllipse" Property="Effect" Value="{StaticResource focusEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter TargetName="shine" Property="Opacity" Value="0.35" />
+                                <Setter TargetName="bgEllipse" Property="Effect" Value="{StaticResource pressedEffect}" />
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter TargetName="bgEllipse" Property="StrokeThickness" Value="1.5" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="bgEllipse" Property="Fill" Value="{StaticResource mouseOverRoundButtonBackground}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="bgEllipse" Property="Fill" Value="{StaticResource disabledRoundButtonBackground}" />
+                                <Setter TargetName="bgEllipse" Property="Stroke" Value="{StaticResource disabledRoundButtonStroke}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Orientation="Horizontal">
+        <!-- you would probably want to put the width, height and margin in to the style too -->
+        <Button Style="{StaticResource roundButton}" Width="30" Height="30" Content="Foo" Margin="5">
+        </Button>
+        <Button Style="{StaticResource roundButton}" IsDefault="True" Width="30" Height="30" Content="Bar" Margin="5">
+        </Button>
+        <Button Style="{StaticResource roundButton}" IsEnabled="False" Width="30" Height="30" Content="Baz" Margin="5">
+        </Button>
+    </StackPanel>
+</Window>

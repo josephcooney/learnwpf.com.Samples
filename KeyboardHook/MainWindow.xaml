@@ -1,0 +1,11 @@
+﻿<Window x:Class="HookSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Viewbox>
+        <StackPanel>
+            <TextBlock Text="Press CTRL+F1 from anywhere in" />
+            <TextBlock Text="windows to bring focus back here" />
+        </StackPanel>
+    </Viewbox>
+</Window>

@@ -1,0 +1,34 @@
+﻿<s:Slide x:Class="LapAroundWPFTechEd2007.Slides.Layout.Canvas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Canvas"
+    xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Controls"
+    xmlns:s="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    >
+      <Canvas>
+        <Button Canvas.Bottom="75" Canvas.Right="150">
+          <TextBlock xml:space="preserve" FontSize="15">Positioned with:
+Canvas.Bottom and Canvas.Right</TextBlock>
+        </Button>
+        <Button Canvas.Top="100" Canvas.Left="200">
+          <TextBlock xml:space="preserve" FontSize="15">Positioned with:
+Canvas.Top and Canvas.Left</TextBlock>
+        </Button>
+        <!-- lines and text showing how the buttons are positioned -->
+        <TextBlock Foreground="Red" Canvas.Top="105" Canvas.Left="50" Text="Canvas.Left='200'"/>
+        <l:ArrowLine X1="0" X2="200" Y1="125" Y2="125" Stroke="Red" Fill="Red"  ArrowEnds="Both" IsArrowClosed="True">
+        </l:ArrowLine>
+      
+		<TextBlock Foreground="Red" Canvas.Top="40" Canvas.Left="230" Text="Canvas.Top='100'"/>
+        <l:ArrowLine X1="225" X2="225" Y1="0" Y2="100" Stroke="Red" Fill="Red"  ArrowEnds="Both" IsArrowClosed="True">
+        </l:ArrowLine>
+        
+        <TextBlock Foreground="Green" Canvas.Right="30" Canvas.Bottom="100" Text="Canvas.Right='150'"/>
+        <l:ArrowLine X1="0" X2="150" Y1="0" Y2="0" Stroke="Green" Fill="Green" Canvas.Bottom="90" Canvas.Right="0"  ArrowEnds="Both" IsArrowClosed="True">
+        </l:ArrowLine>
+      
+		<TextBlock Foreground="Green" Canvas.Bottom="30" Canvas.Right="185" Text="Canvas.Bottom='75'"/>
+        <l:ArrowLine X1="0" X2="0" Y1="0" Y2="75" Canvas.Bottom="0" Canvas.Right="175" Stroke="Green" Fill="Green"  ArrowEnds="Both" IsArrowClosed="True">
+        </l:ArrowLine>
+      </Canvas>
+</s:Slide>

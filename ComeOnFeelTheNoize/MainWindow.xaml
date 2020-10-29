@@ -1,0 +1,44 @@
+﻿<Window x:Class="ComeOnFeelTheNoize.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:n="clr-namespace:ComeOnFeelTheNoize" Title="Generated Noise" Height="350" Width="525">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0" Color="#FF444444" />
+            <GradientStop Offset="0.5" Color="Black" />
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Window.Resources>
+        <n:NoiseGenerator x:Key="background_noise" Size="128">
+            <n:NoiseGenerator.Colors>
+                <n:ColorFrequency Color="#33222222" Frequency="30" />
+                <n:ColorFrequency Color="#3300A500" Frequency="1" />
+                <n:ColorFrequency Color="#55E0E0E0" Frequency="15" />
+                <n:ColorFrequency Color="#33666666" Frequency="15" />
+            </n:NoiseGenerator.Colors>
+        </n:NoiseGenerator>
+        <ImageBrush ImageSource="{Binding Source={StaticResource background_noise}, Path=NoiseImage}" x:Key="background_brush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0 128,128" />
+        <n:NoiseGenerator x:Key="paper_texture" Size="32">
+            <n:NoiseGenerator.Colors>
+                <n:ColorFrequency Color="#FFF8F5E2" Frequency="10" />
+                <n:ColorFrequency Color="#FFF3EDCD" Frequency="1" />
+                <n:ColorFrequency Color="#FFF0F0F0" Frequency="1" />
+                <n:ColorFrequency Color="#FFF7F0CC" Frequency="1" />
+                <n:ColorFrequency Color="#FFFEFECE" Frequency="5" />
+            </n:NoiseGenerator.Colors>
+        </n:NoiseGenerator>
+        <ImageBrush ImageSource="{Binding Source={StaticResource paper_texture}, Path=NoiseImage}" x:Key="paper_brush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0 64,64" />
+
+
+    </Window.Resources>
+    <Grid Background="{StaticResource background_brush}">
+
+        <Border Margin="80" Background="{StaticResource paper_brush}">
+            <Border.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="30" Direction="0" />
+            </Border.Effect>
+            <TextBlock Text="Come on, feel the Noize" FontFamily="Deutsch Gothic" FontSize="60" Foreground="#FF2F1919" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        
+    </Grid>
+</Window>

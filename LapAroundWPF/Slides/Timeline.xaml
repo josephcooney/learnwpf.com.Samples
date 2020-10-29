@@ -1,0 +1,64 @@
+﻿<l:Slide x:Class="LapAroundWPF.Slides.Timeline"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Slides" mc:Ignorable="d" 
+             Title="WPF Timeline">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <BulletDecorator>
+            <TextBlock Text="2000: Project Initiated inside of Microsoft as Camelot" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+        
+        <BulletDecorator>
+            <TextBlock Text="2003: Unvelied at PDC 2003 as Avalon as part of Windows 'longhorn'" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+
+        <BulletDecorator>
+            <TextBlock Text="2005: Avalon Visual Design tool Code-named 'Sparkle' announced at PDC 2005" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+
+        <BulletDecorator>
+            <TextBlock Text="2006: Ships with .NET Framework 3.0 &amp; Windows Vista" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+        
+        <BulletDecorator>
+            <TextBlock Text="2007: Expression Blend 1.0 &amp; .NET 3.5" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+
+        <BulletDecorator>
+            <TextBlock Text="2008: WPF 3.5 sp1 &amp; Blend 2" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+
+        <BulletDecorator>
+            <TextBlock Text="2009: Blend 4" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+        
+        <BulletDecorator>
+            <TextBlock Text="2010: VS 2010, .NET Framework 4.0, Blend 4 &amp; WPF 4" Style="{StaticResource bulletTxt}" />
+            <BulletDecorator.Bullet>
+                <Ellipse Fill="{StaticResource titleForeground}" Width="15" Height="15"  />
+            </BulletDecorator.Bullet>
+        </BulletDecorator>
+    </StackPanel>
+</l:Slide>

@@ -1,0 +1,10 @@
+﻿<l:Slide x:Class="LapAroundWPFTechEd2007.Slides.ContentModelIntro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:LapAroundWPFTechEd2007.Slides"
+    Title="WPF Content Model">
+    <Grid>
+		<Image Source="/Resources/Images/RussianDolls.jpg" />
+		<TextBlock Text="Image courtesy of Peter Allen - http://www.flickr.com/photos/peterallen/" Style="{StaticResource slideSmallText}" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+	</Grid>
+</l:Slide>

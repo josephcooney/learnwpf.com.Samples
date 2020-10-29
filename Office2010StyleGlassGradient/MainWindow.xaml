@@ -1,0 +1,44 @@
+﻿<Window x:Class="Office2010StyleGlassGradient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell" Title="MainWindow" Height="350" Width="525">
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="shell:WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <shell:WindowChrome GlassFrameThickness="9 54 9 9" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Grid>
+                            <Rectangle VerticalAlignment="Top" Height="39" Margin="4,15,4,0">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="Transparent" Offset="0" />
+                                        <GradientStop Color="Transparent" Offset="0.2" />
+                                        <GradientStop Color="White" Offset="0.95" />
+                                        <GradientStop Color="White" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <ContentPresenter Margin="{Binding Source={x:Static shell:SystemParameters2.Current}, Path=WindowNonClientFrameThickness}" Content="{TemplateBinding Content}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+    <Grid>
+        
+        <TabControl>
+            <TabItem Header="Testing">
+
+            </TabItem>
+            <TabItem Header="I &lt;3 WPF">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
